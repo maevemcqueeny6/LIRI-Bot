@@ -69,7 +69,7 @@ function spotifyThis(query) {
 
                 console.log("Your Search Results: ");
                 console.log("Song name " + songs[i].name);
-                console.log("Preview song " + songs[i].preview_url);
+                console.log("Preview song " + songs[i].external_urls.spotify);
                 console.log("Album: " + songs[i].album.name);
                 console.log("Artists: " + songs[i].artists[0].name);
 
