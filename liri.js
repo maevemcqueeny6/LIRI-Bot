@@ -111,8 +111,6 @@ function movieThis(query) {
 function concertThis(query) {
     var queryURL = "https://rest.bandsintown.com/artists/" + query + "/events?app_id=codingbootcamp";
     axios.get(queryURL).then(function (response) {
-        // var to format w/ Moment JS
-        // console.log(response.data[0])
         var date = moment(response.data[0].datetime).format('MM/DD/YYYY')
         console.log("Go see " + response.data[0].lineup[0] + " at " + response.data[0].venue.name + " in " + response.data[0].venue.city + " on " + date + "!");
     })
@@ -129,6 +127,6 @@ function justDoIt() {
 
         // Look Over
         var input = data.split(',');
-        UserInputs(input[0], input[1]);
+        Search(input[0], input[1]);
     });
 };
